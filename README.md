@@ -2,6 +2,10 @@
 
 This is a private copy, change **timing units from millis to micros** to meet the needs in various speed stepper motor control application.
 
+Extra example added for stepper motor control.
+
+yijiangh @Dec/2016
+
 ----------
 
 #IMPORTANT
