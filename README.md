@@ -1,5 +1,9 @@
 # Arduino Timer Object
 
+This is a private copy, change **timing units from millis to micros** to meet the needs in various speed stepper motor control application.
+
+----------
+
 #IMPORTANT
 ### This library was moved to a new repository: https://github.com/aron-bordin/PNG-Arduino-Framework
 I'll update just the new repository. Check and star the .PNG Arduino Framework, there are more objects and Arduino components. This new repository has a better documentation.
