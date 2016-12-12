@@ -1,3 +1,9 @@
+/*
+	- change timer to fit microseconds (from milliseconds)
+	Created by aron-bordin
+	Modified by Yijiang Huang
+*/
+
 #include "stdlib.h"
 #include "Arduino.h"
 

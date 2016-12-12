@@ -37,22 +37,21 @@ void TimerObject::setOnTimer(CallBackType callback){
 }
 
 void TimerObject::Start(){
-	LastTime = millis();
+	LastTime = micros();
 	setEnabled(true);
 }
 
 void TimerObject::Resume(){
-	LastTime = millis() - DiffTime;
+	LastTime = micros() - DiffTime;
 	setEnabled(true);
 }
 
 void TimerObject::Stop(){
 	setEnabled(false);
-
 }
 
 void TimerObject::Pause(){
-	DiffTime = millis() - LastTime;
+	DiffTime = micros() - LastTime;
 	setEnabled(false);
 
 }
@@ -65,10 +64,10 @@ void TimerObject::Update(){
 bool TimerObject::Tick(){
 	if(!blEnabled)
 		return false;
-	if(LastTime > millis()*2)//millis restarted
+	if(LastTime > micros()*2)//micros restarted
 		LastTime = 0;
-	if ((unsigned long int)(millis() - LastTime) >= msInterval) {
-		LastTime = millis();
+	if ((unsigned long int)(micros() - LastTime) >= msInterval) {
+		LastTime = micros();
 		if(isSingleShot())
 			setEnabled(false);
 	    return true;
@@ -82,7 +81,7 @@ unsigned long int TimerObject::getInterval(){
 }
 
 unsigned long int TimerObject::getCurrentTime(){
-	return (unsigned long int)(millis() - LastTime);
+	return (unsigned long int)(micros() - LastTime);
 }
 CallBackType TimerObject::getOnTimerCallback(){
 	return onRun;
